@@ -1,0 +1,49 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ header {
+	position: relative;
+	height: 100px;
+	background: #80deea;
+}
+header::after {
+	position: absolute;
+	content: '';
+	bottom: -100px;
+	display: block;
+	width: 100%;
+	height: 100px;
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon fill='%2380deea' points='0,0 50,50 100,0'%3E%3C/polygon%3E%3C/svg%3E");
+	/* ↑[fill='%2380deea']部分がカラー指定[80deea]部分を変更 */
+	/* svgファイルを外部読み込みする場合は下記を[ファイル名.svg]として保存してurl(ファイル名.svg)で指定 */
+	/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+	<polygon fill="#80deea" points="0,0 50,50 100,0"></polygon>
+	</svg> */
+}
+section {
+	height: 200px;
+	background: url(image.jpg) no-repeat top center;
+	background-size:cover;
+}
+h1,h2 {
+	font-size: 2em;
+	margin: 0;
+	padding: 1em 0;
+	text-align: center;
+	color: #ffffff;
+}
+h2 {
+	padding: 3em 0;
+}
